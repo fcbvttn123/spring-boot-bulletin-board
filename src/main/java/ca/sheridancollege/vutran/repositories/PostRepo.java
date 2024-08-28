@@ -9,6 +9,5 @@ import ca.sheridancollege.vutran.domain.Post;
 
 @Repository
 public interface PostRepo extends JpaRepository<Post, Long> {
-	public List<Post> findAllByOrderByTimeCreatedDesc();
 	public List<Post> findAllByOrderByDateCreatedDesc();
 }

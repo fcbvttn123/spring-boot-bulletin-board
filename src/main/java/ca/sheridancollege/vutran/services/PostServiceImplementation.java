@@ -16,7 +16,7 @@ public class PostServiceImplementation implements PostService {
 
 	@Override
 	public List<Post> getPostsInChronologicalOrder() {
-		return postRepo.findAllByOrderByTimeCreatedDesc();
+		return postRepo.findAllByOrderByDateCreatedDesc();
 	}
 
 	@Override
