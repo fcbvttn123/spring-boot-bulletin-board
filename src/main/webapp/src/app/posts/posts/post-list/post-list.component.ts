@@ -21,8 +21,8 @@ export class PostListComponent {
   }
   ngOnInit(): void {
     this.getPosts();
-    // this.postService.onPostAdded.subscribe((data: Post) =>
-    //   this.posts.push(data)
-    // );
+    this.postService.onPostAdded.subscribe((data: Post) =>
+      this.posts.push(data)
+    );
   }
 }

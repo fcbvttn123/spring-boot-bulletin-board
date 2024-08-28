@@ -1,11 +1,29 @@
 <div class="submit-form">
   <div class="form-group">
     Name:
-    <input class="form-control" id="name" type="text" name="name" />
+    <input
+      class="form-control"
+      id="name"
+      type="text"
+      name="name"
+      [(ngModel)]="post.creator"
+    />
     Topic:
-    <input class="form-control" id="topic" type="text" name="topic" />
+    <input
+      class="form-control"
+      id="topic"
+      type="text"
+      name="topic"
+      [(ngModel)]="post.topic"
+    />
     Content:
-    <input class="form-control" id="content" type="text" name="content" />
-    <button class="btn btn-success">Submit</button>
+    <input
+      class="form-control"
+      id="content"
+      type="text"
+      name="content"
+      [(ngModel)]="post.content"
+    />
+    <button class="btn btn-success" (click)="savePost()">Submit</button>
   </div>
 </div>

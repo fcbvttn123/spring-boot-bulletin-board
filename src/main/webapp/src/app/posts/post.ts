@@ -3,6 +3,6 @@ export class Post {
   creator?: string;
   topic?: string;
   content?: string;
-  dateCreated?: string;
-  timeCreated?: string;
+  dateCreated?: Date;
+  timeCreated?: Date;
 }

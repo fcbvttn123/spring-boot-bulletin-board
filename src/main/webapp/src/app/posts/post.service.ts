@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Post } from './post';
@@ -13,4 +13,8 @@ export class PostService {
   getAll(): Observable<Post[]> {
     return this.http.get<Post[]>(restUrl);
   }
+  createPost(data: any): Observable<any> {
+    return this.http.post(restUrl, data);
+  }
+  onPostAdded = new EventEmitter<Post>();
 }
