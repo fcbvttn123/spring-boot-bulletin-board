@@ -12,4 +12,17 @@ import { PostService } from '../../post.service';
 export class PostListComponent {
   constructor(private postService: PostService) {}
   posts: Post[] = [];
+  getPosts(): void {
+    this.postService.getAll().subscribe({
+      next: (data) => {
+        this.posts = data;
+      },
+    });
+  }
+  ngOnInit(): void {
+    this.getPosts();
+    // this.postService.onPostAdded.subscribe((data: Post) =>
+    //   this.posts.push(data)
+    // );
+  }
 }

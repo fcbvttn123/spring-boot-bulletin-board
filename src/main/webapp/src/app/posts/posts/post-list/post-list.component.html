@@ -1,5 +1,15 @@
-<ul class="list-group">
-  <li class="list-group-item">Frank 21</li>
-  <li class="list-group-item">Sam 20</li>
-  <li class="list-group-item">Sue 24</li>
-</ul>
+<div class="container mt-4">
+  <ul class="list-group">
+    <li
+      class="list-group-item"
+      *ngFor="let post of posts; trackBy: trackByPostId"
+    >
+      <h5>{{ post.topic }}</h5>
+      <h6 class="text-muted">By {{ post.creator }}</h6>
+      <p>{{ post.content }}</p>
+      <small class="text-muted">
+        {{ post.dateCreated }} at {{ post.timeCreated }}
+      </small>
+    </li>
+  </ul>
+</div>
